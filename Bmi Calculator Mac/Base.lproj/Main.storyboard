@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14460.31"/>
+        <capability name="System colors introduced in macOS 10.14" minToolsVersion="10.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Window Controller-->
+        <scene sceneID="R2V-B0-nI4">
+            <objects>
+                <customObject id="Oky-zY-oP4" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+                <windowController id="B8D-0N-5wS" sceneMemberID="viewController">
+                    <window key="window" title="Bmi calculator" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" titlebarAppearsTransparent="YES" id="IQv-IB-iLA">
+                        <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
+                        <rect key="contentRect" x="762" y="369" width="250" height="450"/>
+                        <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
+                        <value key="minSize" type="size" width="250" height="450"/>
+                        <value key="maxSize" type="size" width="250" height="450"/>
+                        <value key="minFullScreenContentSize" type="size" width="250" height="450"/>
+                        <value key="maxFullScreenContentSize" type="size" width="250" height="450"/>
+                        <connections>
+                            <outlet property="delegate" destination="B8D-0N-5wS" id="98r-iN-zZc"/>
+                        </connections>
+                    </window>
+                    <connections>
+                        <segue destination="vPb-FI-wFz" kind="relationship" relationship="window.shadowedContentViewController" id="kt0-L1-BGJ"/>
+                    </connections>
+                </windowController>
+            </objects>
+            <point key="canvasLocation" x="-473" y="-3"/>
+        </scene>
+        <!--Tab View Controller-->
+        <scene sceneID="JCV-Kb-miz">
+            <objects>
+                <customObject id="d7I-QW-ACa" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+                <tabViewController selectedTabViewItemIndex="0" id="vPb-FI-wFz" sceneMemberID="viewController">
+                    <tabViewItems>
+                        <tabViewItem label="BMI" id="Ude-Ve-w5k"/>
+                        <tabViewItem label="Help" id="vJ2-JU-nG9"/>
+                    </tabViewItems>
+                    <tabView key="tabView" type="noTabsNoBorder" id="s5Z-jh-8u7">
+                        <rect key="frame" x="0.0" y="0.0" width="250" height="450"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <font key="font" metaFont="message"/>
+                        <connections>
+                            <outlet property="delegate" destination="vPb-FI-wFz" id="LaK-2e-zPM"/>
+                        </connections>
+                    </tabView>
+                    <connections>
+                        <outlet property="tabView" destination="s5Z-jh-8u7" id="vPW-Qu-icm"/>
+                        <segue destination="HKh-5B-NNq" kind="relationship" relationship="tabItems" id="9ks-jw-D9g"/>
+                        <segue destination="zOV-GQ-b3p" kind="relationship" relationship="tabItems" id="gCh-Gk-TOA"/>
+                    </connections>
+                </tabViewController>
+            </objects>
+            <point key="canvasLocation" x="-57" y="-3"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Iec-g7-8CM">
+            <objects>
+                <viewController id="zOV-GQ-b3p" sceneMemberID="viewController">
+                    <view key="view" id="tQU-5A-cH9">
+                        <rect key="frame" x="0.0" y="0.0" width="250" height="450"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <scrollView fixedFrame="YES" borderType="groove" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" hasVerticalScroller="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DjD-f4-b1I">
+                                <rect key="frame" x="20" y="82" width="210" height="333"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <clipView key="contentView" ambiguous="YES" drawsBackground="NO" copiesOnScroll="NO" id="Qib-gS-vPn">
+                                    <rect key="frame" x="2" y="2" width="206" height="329"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <textView ambiguous="YES" importsGraphics="NO" verticallyResizable="YES" spellingCorrection="YES" smartInsertDelete="YES" id="l7t-Dk-7GA">
+                                            <rect key="frame" x="0.0" y="0.0" width="224" height="490"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="underPageBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            <size key="minSize" width="206" height="329"/>
+                                            <size key="maxSize" width="442" height="10000000"/>
+                                            <attributedString key="textStorage">
+                                                <fragment>
+                                                    <string key="content"> Welcome to the body mass index calculator.
+
+</string>
+                                                    <attributes>
+                                                        <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                        <font key="NSFont" size="12" name="Helvetica"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                                <fragment>
+                                                    <mutableString key="content">In order to start working with the program, you need to enter only 4 parameters. It is very easy to do, it is enough to indicate your age, height in centimeters and weight in kilograms, and also indicate your gender. Please note that it is necessary to fill in all the fields for the calculator to work correctly.
+</mutableString>
+                                                    <attributes>
+                                                        <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                        <font key="NSFont" size="12" name="Helvetica"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                                <fragment>
+                                                    <string key="content" base64-UTF8="YES">
+Cg
+</string>
+                                                    <attributes>
+                                                        <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                        <font key="NSFont" size="12" name="Helvetica"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                                <fragment>
+                                                    <mutableString key="content">Please note that the calculator calculates the body mass index with the minimum and maximum following data: 
+Age from 18 to 100 years 
+Height from 100 to 240 centimeters 
+Weight is from 20 to 160 kilograms  If possible, also indicate your gender. This slightly affects the result of the body mass index calculation. However, if you are embarrassed, you can not specify anything. 
+The body mass index calculator is working in test mode, so there may be some failures. We apologize for this in advance.
+
+Made with love and without coffee. </mutableString>
+                                                    <attributes>
+                                                        <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                        <font key="NSFont" size="12" name="Helvetica"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                            <color key="insertionPointColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                        </textView>
+                                    </subviews>
+                                    <color key="backgroundColor" name="unemphasizedSelectedTextBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </clipView>
+                                <edgeInsets key="contentInsets" left="0.0" right="0.0" top="0.0" bottom="0.0"/>
+                                <scroller key="verticalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="BHC-wN-POw">
+                                    <rect key="frame" x="-100" y="-100" width="15" height="356"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </scroller>
+                            </scrollView>
+                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4EI-0S-uW2">
+                                <rect key="frame" x="101" y="20" width="48" height="48"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="icon_128" id="Y5W-WX-LF0"/>
+                            </imageView>
+                        </subviews>
+                    </view>
+                </viewController>
+                <customObject id="YWd-NG-Zgv" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="418" y="341"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="6TU-dr-5nw">
+            <objects>
+                <viewController id="HKh-5B-NNq" customClass="ViewController" customModule="Bmi_Calculator_Mac" sceneMemberID="viewController">
+                    <view key="view" id="ghI-Y4-R07" customClass="View">
+                        <rect key="frame" x="0.0" y="0.0" width="250" height="450"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="tyt-ZX-3Dq">
+                                <rect key="frame" x="39" y="356" width="172" height="55"/>
+                                <textFieldCell key="cell" borderStyle="border" alignment="center" title="Hi there! Please enter your body data for calculate" id="OBm-4m-dVg">
+                                    <font key="font" usesAppearanceFont="YES"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="bnh-iR-UIa">
+                                <rect key="frame" x="39" y="324" width="172" height="22"/>
+                                <textFieldCell key="cell" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" alignment="center" placeholderString="enter your age" drawsBackground="YES" id="kl7-Gw-CbY">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="HAP-hl-v9C">
+                                <rect key="frame" x="39" y="292" width="172" height="22"/>
+                                <textFieldCell key="cell" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" alignment="center" placeholderString="enter height in cm" drawsBackground="YES" id="6uP-6Y-YuI">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="nzd-LW-4JQ">
+                                <rect key="frame" x="39" y="260" width="172" height="22"/>
+                                <textFieldCell key="cell" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" alignment="center" placeholderString="enter your weight in kg" drawsBackground="YES" id="Y4i-JE-jcI">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="t0k-ot-05J">
+                                <rect key="frame" x="33" y="13" width="184" height="32"/>
+                                <buttonCell key="cell" type="push" title="Exit" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="bgw-q6-tdw">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="exitButton:" target="HKh-5B-NNq" id="dAB-gW-HIh"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="yE8-va-aiT">
+                                <rect key="frame" x="33" y="180" width="184" height="32"/>
+                                <buttonCell key="cell" type="push" title="Calculate" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="aRX-yt-hIr">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="calculateButton:" target="HKh-5B-NNq" id="Oq7-1v-e7U"/>
+                                </connections>
+                            </button>
+                            <popUpButton translatesAutoresizingMaskIntoConstraints="NO" id="BoI-hs-Tri">
+                                <rect key="frame" x="37" y="225" width="176" height="29"/>
+                                <popUpButtonCell key="cell" type="bevel" title="No gender" bezelStyle="regularSquare" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" selectedItem="GKN-pe-uKi" id="q81-HI-QNk">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="menu"/>
+                                    <menu key="menu" id="SBf-H1-Cmt">
+                                        <items>
+                                            <menuItem title="Woman" id="3ZZ-oE-KO7"/>
+                                            <menuItem title="Man" id="tYh-rL-Iw7"/>
+                                            <menuItem title="No gender" state="on" id="GKN-pe-uKi"/>
+                                        </items>
+                                    </menu>
+                                </popUpButtonCell>
+                            </popUpButton>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="9p6-8S-tcn">
+                                <rect key="frame" x="37" y="140" width="176" height="17"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" id="wJR-Za-K9Z">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="9oZ-bb-eaz">
+                                <rect key="frame" x="37" y="95" width="176" height="17"/>
+                                <textFieldCell key="cell" alignment="center" id="rxh-bR-jjl">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="HAP-hl-v9C" firstAttribute="top" secondItem="bnh-iR-UIa" secondAttribute="bottom" constant="10" symbolic="YES" id="0lP-mw-M1w"/>
+                            <constraint firstItem="tyt-ZX-3Dq" firstAttribute="leading" secondItem="ghI-Y4-R07" secondAttribute="leading" constant="39" id="2md-O4-V20"/>
+                            <constraint firstItem="yE8-va-aiT" firstAttribute="leading" secondItem="9p6-8S-tcn" secondAttribute="leading" id="4fk-gF-jQC"/>
+                            <constraint firstItem="BoI-hs-Tri" firstAttribute="leading" secondItem="yE8-va-aiT" secondAttribute="leading" id="5c9-FT-34i"/>
+                            <constraint firstItem="9oZ-bb-eaz" firstAttribute="trailing" secondItem="t0k-ot-05J" secondAttribute="trailing" id="6J8-Y2-sXh"/>
+                            <constraint firstItem="bnh-iR-UIa" firstAttribute="leading" secondItem="HAP-hl-v9C" secondAttribute="leading" id="9uc-8T-cGA"/>
+                            <constraint firstItem="nzd-LW-4JQ" firstAttribute="leading" secondItem="BoI-hs-Tri" secondAttribute="leading" id="Dl1-Oa-sMB"/>
+                            <constraint firstItem="9p6-8S-tcn" firstAttribute="trailing" secondItem="9oZ-bb-eaz" secondAttribute="trailing" id="EC3-w5-mTa"/>
+                            <constraint firstItem="yE8-va-aiT" firstAttribute="top" secondItem="BoI-hs-Tri" secondAttribute="bottom" constant="20" symbolic="YES" id="Id9-jg-4B5"/>
+                            <constraint firstItem="9oZ-bb-eaz" firstAttribute="top" secondItem="9p6-8S-tcn" secondAttribute="bottom" constant="28" id="KMl-Gb-poD"/>
+                            <constraint firstItem="tyt-ZX-3Dq" firstAttribute="trailing" secondItem="bnh-iR-UIa" secondAttribute="trailing" id="PQO-WU-pMm"/>
+                            <constraint firstItem="BoI-hs-Tri" firstAttribute="trailing" secondItem="yE8-va-aiT" secondAttribute="trailing" id="RaU-k7-vzr"/>
+                            <constraint firstItem="tyt-ZX-3Dq" firstAttribute="leading" secondItem="bnh-iR-UIa" secondAttribute="leading" id="SR7-pU-3GA"/>
+                            <constraint firstItem="HAP-hl-v9C" firstAttribute="trailing" secondItem="nzd-LW-4JQ" secondAttribute="trailing" id="az4-v4-XEO"/>
+                            <constraint firstItem="HAP-hl-v9C" firstAttribute="leading" secondItem="nzd-LW-4JQ" secondAttribute="leading" id="b81-Qf-pXf"/>
+                            <constraint firstItem="9p6-8S-tcn" firstAttribute="top" secondItem="yE8-va-aiT" secondAttribute="bottom" constant="30" id="evO-zA-jUP"/>
+                            <constraint firstItem="9oZ-bb-eaz" firstAttribute="leading" secondItem="t0k-ot-05J" secondAttribute="leading" id="fLG-QV-JQh"/>
+                            <constraint firstItem="yE8-va-aiT" firstAttribute="trailing" secondItem="9p6-8S-tcn" secondAttribute="trailing" id="gX6-Ro-m4B"/>
+                            <constraint firstItem="t0k-ot-05J" firstAttribute="top" secondItem="9oZ-bb-eaz" secondAttribute="bottom" constant="54" id="gm9-U1-eCB"/>
+                            <constraint firstItem="BoI-hs-Tri" firstAttribute="top" secondItem="nzd-LW-4JQ" secondAttribute="bottom" constant="8" symbolic="YES" id="h7E-QB-XVa"/>
+                            <constraint firstItem="bnh-iR-UIa" firstAttribute="top" secondItem="tyt-ZX-3Dq" secondAttribute="bottom" constant="10" symbolic="YES" id="i6e-Ta-PrF"/>
+                            <constraint firstItem="9p6-8S-tcn" firstAttribute="leading" secondItem="9oZ-bb-eaz" secondAttribute="leading" id="i9N-Up-hAh"/>
+                            <constraint firstItem="bnh-iR-UIa" firstAttribute="trailing" secondItem="HAP-hl-v9C" secondAttribute="trailing" id="iN7-3x-f9y"/>
+                            <constraint firstAttribute="bottom" secondItem="t0k-ot-05J" secondAttribute="bottom" constant="20" symbolic="YES" id="inU-6O-6Sa"/>
+                            <constraint firstItem="nzd-LW-4JQ" firstAttribute="trailing" secondItem="BoI-hs-Tri" secondAttribute="trailing" id="sdO-yR-Rzf"/>
+                            <constraint firstItem="nzd-LW-4JQ" firstAttribute="top" secondItem="HAP-hl-v9C" secondAttribute="bottom" constant="10" symbolic="YES" id="vj8-4f-RJE"/>
+                            <constraint firstItem="tyt-ZX-3Dq" firstAttribute="centerX" secondItem="ghI-Y4-R07" secondAttribute="centerX" id="xcb-Ew-AWp"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="ageInput" destination="bnh-iR-UIa" id="wqf-4J-uNR"/>
+                        <outlet property="genderButton" destination="BoI-hs-Tri" id="G7E-Gy-CfZ"/>
+                        <outlet property="healthDiagnosis" destination="9oZ-bb-eaz" id="VSl-nc-Tsj"/>
+                        <outlet property="heightInput" destination="HAP-hl-v9C" id="ZEq-BQ-HSx"/>
+                        <outlet property="resultLabel" destination="9p6-8S-tcn" id="u36-w2-Uvy"/>
+                        <outlet property="weightInput" destination="nzd-LW-4JQ" id="2vk-Oe-i4S"/>
+                    </connections>
+                </viewController>
+                <customObject id="kdf-dV-Mi6" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="418" y="-162"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="icon_128" width="128" height="128"/>
+    </resources>
+</document>

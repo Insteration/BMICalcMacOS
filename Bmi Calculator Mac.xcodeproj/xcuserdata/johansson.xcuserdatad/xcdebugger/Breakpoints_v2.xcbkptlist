@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Bmi Calculator Mac/ViewController.swift"
+            timestampString = "568061861.833348"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "14"
+            endingLineNumber = "14"
+            landmarkName = "ViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Bmi_Calculator_Mac.ViewController.weightInput.getter : weak Swift.Optional&lt;__C.NSTextField&gt;"
+                  moduleName = "Bmi Calculator Mac"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/johansson/Desktop/Xcode/Other/Bmi%20Calculator%20Mac/Bmi%20Calculator%20Mac/ViewController.swift"
+                  timestampString = "568061693.425409"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "86">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Bmi_Calculator_Mac.ViewController.weightInput.setter : weak Swift.Optional&lt;__C.NSTextField&gt;"
+                  moduleName = "Bmi Calculator Mac"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/johansson/Desktop/Xcode/Other/Bmi%20Calculator%20Mac/Bmi%20Calculator%20Mac/ViewController.swift"
+                  timestampString = "568061693.427292"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "106">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Bmi_Calculator_Mac.ViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; Bmi_Calculator_Mac.ViewController"
+                  moduleName = "Bmi Calculator Mac"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/johansson/Desktop/Xcode/Other/Bmi%20Calculator%20Mac/Bmi%20Calculator%20Mac/ViewController.swift"
+                  timestampString = "568061693.428996"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "186">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Bmi_Calculator_Mac.ViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;Bmi_Calculator_Mac.ViewController&gt;"
+                  moduleName = "Bmi Calculator Mac"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/johansson/Desktop/Xcode/Other/Bmi%20Calculator%20Mac/Bmi%20Calculator%20Mac/ViewController.swift"
+                  timestampString = "568061693.430692"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "157">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
