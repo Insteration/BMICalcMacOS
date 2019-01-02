@@ -8,7 +8,7 @@
 
 import Foundation
 
-public class Health {
+class Health {
     final let insufficient = "Insufficient"
     final let slighty = "Slightly reduced, not harmful to health"
     final let normal = "Normal"
@@ -19,7 +19,7 @@ public class Health {
     final let error = "Enter correct data"
 }
 
-public class HumanParameters {
+class HumanParameters {
     var age: Int?
     var weight: Double?
     var height: Double?
